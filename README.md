@@ -1,136 +1,36 @@
-# Modern Portfolio Website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A modern, responsive portfolio website built with Next.js, featuring a sleek UI and smooth animations.
+## Getting Started
 
-## 🚀 Features
+First, run the development server:
 
-- ⚡ Built with Next.js 14+ for optimal performance
-- 🎨 Modern and clean UI design
-- 📱 Fully responsive across all devices
-- 🌙 Dark mode support
-- ✨ Smooth animations and transitions
-- 🎯 SEO optimized
-- 🚀 Fast page loads with static generation
-- 📊 Performance optimized
-
-## 🛠️ Tech Stack
-
-- **Framework:** Next.js
-- **Styling:** Tailwind CSS / CSS Modules
-- **Animations:** Framer Motion
-- **Icons:** React Icons / Lucide Icons
-- **Deployment:** Vercel
-
-## 📦 Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
-```
-
-2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-# or
-pnpm install
-```
-
-3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
+# or
+bun dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🏗️ Project Structure
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```
-portfolio/
-├── app/                  # Next.js app directory
-│   ├── layout.tsx       # Root layout
-│   ├── page.tsx         # Home page
-│   └── globals.css      # Global styles
-├── components/          # React components
-│   ├── ui/             # UI components
-│   └── sections/       # Page sections
-├── public/             # Static assets
-│   ├── images/
-│   └── icons/
-├── lib/                # Utility functions
-└── styles/             # Additional styles
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🎨 Customization
+## Learn More
 
-### Update Personal Information
+To learn more about Next.js, take a look at the following resources:
 
-Edit the configuration file or component props to update:
-- Name and bio
-- Contact information
-- Social media links
-- Project details
-- Skills and experience
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Modify Theme
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Customize colors and styles in:
-- `tailwind.config.js` - Theme configuration
-- `app/globals.css` - Global styles
-- Component-level styles
+## Deploy on Vercel
 
-## 🚀 Deployment
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-### Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com):
-
-1. Push your code to GitHub
-2. Import your repository to Vercel
-3. Vercel will automatically detect Next.js and configure the build settings
-4. Your site will be live in minutes!
-
-### Other Deployment Options
-
-- **Netlify:** Connect your Git repository
-- **AWS Amplify:** Deploy with AWS services
-- **Docker:** Use the included Dockerfile
-
-## 📝 Environment Variables
-
-Create a `.env.local` file in the root directory:
-
-```env
-NEXT_PUBLIC_SITE_URL=https://yoursite.com
-NEXT_PUBLIC_GA_ID=your-google-analytics-id
-```
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/portfolio/issues).
-
-## 📄 License
-
-This project is [MIT](LICENSE) licensed.
-
-## 👤 Author
-
-**Your Name**
-
-- Website: [yourwebsite.com](https://yourwebsite.com)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [@yourname](https://linkedin.com/in/yourname)
-
-## ⭐ Show Your Support
-
-Give a ⭐️ if you like this project!
-
----
-
-Built with ❤️ using Next.js
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
