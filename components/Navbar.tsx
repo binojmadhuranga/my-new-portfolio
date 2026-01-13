@@ -19,7 +19,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-zinc-900 dark:text-zinc-50">
-            Binoj
+            Binoj Madhuranga
           </Link>
 
           {/* Desktop Navigation */}
