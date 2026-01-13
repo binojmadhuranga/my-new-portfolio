@@ -11,7 +11,7 @@ export default function Hero() {
               👋 Welcome to my portfolio
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-zinc-900 dark:text-zinc-50 leading-tight">
-              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Binoj</span>
+              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Binoj Madhuranga</span>
             </h1>
             <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed">
               Full-Stack Developer passionate about building beautiful, scalable web applications with modern technologies.

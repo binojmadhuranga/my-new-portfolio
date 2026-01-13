@@ -42,6 +42,14 @@ export default function Projects() {
       demoLink: "https://demo.com",
       githubLink: "https://github.com",
     },
+    {
+      title: "Fitness Tracker",
+      description: "Mobile-responsive fitness tracking application with workout plans, calorie tracking, and progress visualization.",
+      image: "/project6.jpg",
+      tags: ["React", "Firebase", "Tailwind", "Chart.js"],
+      demoLink: "https://demo.com",
+      githubLink: "https://github.com",
+    },
   ];
 
   return (
