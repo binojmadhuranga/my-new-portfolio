@@ -21,10 +21,12 @@ export default function ProjectCard({
     <div className="group relative overflow-hidden rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300 hover:shadow-xl">
       {/* Project Image */}
       <div className="relative h-48 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-blue-500/20"></div>
-        <div className="flex items-center justify-center h-full text-6xl font-bold text-zinc-300 dark:text-zinc-700">
-          {title.charAt(0)}
-        </div>
+        <img 
+          src={image} 
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
       </div>
 
       {/* Content */}

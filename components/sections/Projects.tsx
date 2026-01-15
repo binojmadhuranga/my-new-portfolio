@@ -3,12 +3,12 @@ import ProjectCard from "@/components/ProjectCard";
 export default function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, inventory management, and real-time order tracking.",
-      image: "/project1.jpg",
-      tags: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-      demoLink: "https://demo.com",
-      githubLink: "https://github.com",
+      title: "Gemora – Digital Gemstone Trading & Auction Platform",
+      description: "Gemora is a secure digital gemstone marketplace using AI models for verification, pricing insights, fraud detection, and transparent real-time auctions.",
+      image: "/projects/gemora.png",
+      tags: ["Spring Boot", "Node.js", "MySQL", "Expo", "React", "TensorFlow", "Zustand"],
+      demoLink: "https://www.linkedin.com/posts/binoj-madhuranga_gemora-capstoneproject-ai-activity-7407052268069584896-yolB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEtcVf4BGJkmZE9RHJogysB5Bys_uJKhYVU",
+      githubLink: "https://github.com/stars/binojmadhuranga/lists/gemora",
     },
     {
       title: "Task Management App",

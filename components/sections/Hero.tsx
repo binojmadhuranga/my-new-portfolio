@@ -47,10 +47,10 @@ export default function Hero() {
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative inline-block group animate-[popup_1.5s_ease-out]">
               {/* Animated corner decorations */}
-              <div className="hidden md:block absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-slate-700 dark:border-slate-400 rounded-tl-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-top-6 group-hover:-left-6 opacity-30 group-hover:opacity-50"></div>
-              <div className="hidden md:block absolute -top-4 -right-4 w-20 h-20 border-t-4 border-r-4 border-blue-900 dark:border-blue-500 rounded-tr-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-top-6 group-hover:-right-6 opacity-30 group-hover:opacity-50"></div>
-              <div className="hidden md:block absolute -bottom-4 -left-4 w-20 h-20 border-b-4 border-l-4 border-zinc-600 dark:border-zinc-500 rounded-bl-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-bottom-6 group-hover:-left-6 opacity-30 group-hover:opacity-50"></div>
-              <div className="hidden md:block absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-slate-800 dark:border-slate-300 rounded-br-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-bottom-6 group-hover:-right-6 opacity-30 group-hover:opacity-50"></div>
+              <div className="hidden md:block absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-slate-700 dark:border-slate-400 rounded-tl-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-top-6 group-hover:-left-6 opacity-10 group-hover:opacity-70"></div>
+              <div className="hidden md:block absolute -top-4 -right-4 w-20 h-20 border-t-4 border-r-4 border-blue-900 dark:border-blue-500 rounded-tr-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-top-6 group-hover:-right-6 opacity-20 group-hover:opacity-70"></div>
+              <div className="hidden md:block absolute -bottom-4 -left-4 w-20 h-20 border-b-4 border-l-4 border-zinc-600 dark:border-zinc-500 rounded-bl-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-bottom-6 group-hover:-left-6 opacity-10 group-hover:opacity-70"></div>
+              <div className="hidden md:block absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-slate-800 dark:border-slate-300 rounded-br-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-bottom-6 group-hover:-right-6 opacity-10 group-hover:opacity-70"></div>
               
               {/* Glowing background effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-blue-900 to-zinc-800 rounded-3xl blur-3xl opacity-15 animate-pulse"></div>
@@ -63,7 +63,7 @@ export default function Hero() {
                 <img 
                   src="/profile.png" 
                   alt="Binoj Madhuranga" 
-                  className="max-w-md w-full h-auto object-contain transition-all duration-500 relative z-0"
+                  className="max-w-md lg:max-w-xl w-full h-auto object-contain transition-all duration-500 relative z-0"
                   style={{
                     filter: 'drop-shadow(0 0 8px rgba(71, 85, 105, 0.4)) drop-shadow(0 0 36px rgba(30, 58, 138, 0.3)) drop-shadow(0 0 24px rgba(100, 116, 139, 0.2))'
                   }}
