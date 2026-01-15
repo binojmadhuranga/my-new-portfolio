@@ -1,4 +1,4 @@
-import Link from "next/link";
+"use client";
 
 interface ProjectCardProps {
   title: string;
