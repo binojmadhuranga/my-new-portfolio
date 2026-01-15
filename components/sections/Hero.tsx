@@ -52,8 +52,8 @@ export default function Hero() {
               <div className="hidden md:block absolute -bottom-4 -left-4 w-20 h-20 border-b-4 border-l-4 border-zinc-600 dark:border-zinc-500 rounded-bl-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-bottom-6 group-hover:-left-6 opacity-10 group-hover:opacity-70"></div>
               <div className="hidden md:block absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-slate-800 dark:border-slate-300 rounded-br-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-bottom-6 group-hover:-right-6 opacity-10 group-hover:opacity-70"></div>
               
-              {/* Glowing background effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-blue-900 to-zinc-800 rounded-3xl blur-3xl opacity-15 animate-pulse"></div>
+              {/* Animated highlighted square background with subtle shadow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-blue-900 to-zinc-800 rounded-3xl opacity-8 animate-[squarePulse_4s_ease-in-out_infinite] shadow-[0_0_40px_rgba(71,85,105,0.15),0_0_80px_rgba(30,58,138,0.1),inset_0_0_60px_rgba(100,116,139,0.08)]"></div>
               
               {/* Profile Image */}
               <div className="relative overflow-hidden transition-transform duration-700 group-hover:scale-105">

@@ -12,3 +12,14 @@
     transform: scale(1);
   }
 }
+
+@keyframes squarePulse {
+  0%, 100% {
+    opacity: 0.08;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: scale(1.02);
+  }
+}

@@ -27,7 +27,7 @@ export default function Projects() {
       githubLink: "https://github.com/stars/binojmadhuranga/lists/smart-biz",
     },
     {
-      title: " SkySense Dryer - IoT Based Smart Home Appliance",
+      title: " SkySense Dryer - IoT Based Smart Home Appliance (Ongoing)",
       description: "SkySense is an IoT-based smart cloth rack system that automatically adapts to rain, sunlight, and wind, with mobile app control.",
       image: "/projects/skysense.png",
       tags: ["IOT", "React", "Node.js", "MongoDB", "Express", "React Native"],
