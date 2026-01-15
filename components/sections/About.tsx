@@ -1,3 +1,5 @@
+"use client";
+
 export default function About() {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black relative overflow-hidden">
