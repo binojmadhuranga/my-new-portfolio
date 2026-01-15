@@ -30,7 +30,7 @@ export default function About() {
               />
             </div>
             <div className="text-zinc-600 dark:text-zinc-400 font-medium text-sm leading-relaxed">
-              BSc Honours Software Engineering undergraduate at Sabaragamuwa University
+              BSc (Hons) Software Engineering undergraduate with a current GPA of <span className="text-green-600 dark:text-green-400 font-semibold text-base">3.0+</span> at Sabaragamuwa University.
             </div>
           </div>
           <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
@@ -38,15 +38,15 @@ export default function About() {
               10+
             </div>
             <div className="text-zinc-600 dark:text-zinc-400 font-medium">
-              Academic & Personal Projects
+              Academic & Personal Projects Including Web, Mobile, AI, and IoT Base.
             </div>
           </div>
           <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
-            <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">
-              3.0+ GPA
+            <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">
+              Volunteer Experience
             </div>
             <div className="text-zinc-600 dark:text-zinc-400 font-medium">
-              Strong Academic Background
+             Participated in volunteer activities, supporting academic and community initiatives while developing teamwork and leadership skills.
             </div>
           </div>
         </div>
