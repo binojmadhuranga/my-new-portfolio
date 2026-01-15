@@ -1,7 +1,29 @@
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
-      <div className="max-w-7xl mx-auto">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black relative overflow-hidden">
+      {/* Background Image with Opacity - Mobile */}
+      <div 
+        className="md:hidden absolute left-0 top-0 bottom-0 w-full opacity-55 dark:opacity-40 pointer-events-none dark:brightness-40"
+        style={{
+          backgroundImage: 'url(/about.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: '70% top',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
+      
+      {/* Background Image with Opacity - Desktop */}
+      <div 
+        className="hidden md:block absolute left-0 top-0 bottom-0 w-1/2 opacity-55 dark:opacity-40 pointer-events-none dark:brightness-50"
+        style={{
+          backgroundImage: 'url(/about.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: '30% 30%',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50 mb-4">
             About Me
