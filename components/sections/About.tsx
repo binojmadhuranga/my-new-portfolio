@@ -1,7 +1,29 @@
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
-      <div className="max-w-7xl mx-auto">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black relative overflow-hidden">
+      {/* Background Image with Opacity - Mobile */}
+      <div 
+        className="md:hidden absolute left-0 top-0 bottom-0 w-full opacity-55 dark:opacity-40 pointer-events-none dark:brightness-40"
+        style={{
+          backgroundImage: 'url(/about.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: '70% top',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
+      
+      {/* Background Image with Opacity - Desktop */}
+      <div 
+        className="hidden md:block absolute left-0 top-0 bottom-0 w-1/2 opacity-55 dark:opacity-40 pointer-events-none dark:brightness-50"
+        style={{
+          backgroundImage: 'url(/about.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: '30% 30%',
+          backgroundRepeat: 'no-repeat'
+        }}
+      ></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50 mb-4">
             About Me
@@ -30,7 +52,7 @@ export default function About() {
               />
             </div>
             <div className="text-zinc-600 dark:text-zinc-400 font-medium text-sm leading-relaxed">
-              BSc Honours Software Engineering undergraduate at Sabaragamuwa University
+              BSc (Hons) Software Engineering undergraduate with a current GPA of <span className="text-green-600 dark:text-green-400 font-semibold text-base">3.0+</span> at Sabaragamuwa University.
             </div>
           </div>
           <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20">
@@ -38,15 +60,15 @@ export default function About() {
               10+
             </div>
             <div className="text-zinc-600 dark:text-zinc-400 font-medium">
-              Academic & Personal Projects
+              Academic & Personal Projects Including Web, Mobile, AI, and IoT Base.
             </div>
           </div>
           <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
-            <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">
-              3.0+ GPA
+            <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">
+              Volunteer Experience
             </div>
             <div className="text-zinc-600 dark:text-zinc-400 font-medium">
-              Strong Academic Background
+             Participated in volunteer activities, supporting academic and community initiatives while developing teamwork and leadership skills.
             </div>
           </div>
         </div>

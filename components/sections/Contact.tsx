@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {/* Contact Info Cards */}
           <a
-            href="mailto:contact@binoj.dev"
+            href="mailto:binojmadhuranga2002.04.04@gmail.com"
             className="group p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-slate-500 dark:hover:border-slate-500 transition-all hover:shadow-lg hover:-translate-y-1"
           >
             <div className="flex items-start gap-4">
@@ -25,13 +25,13 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-1">Email</h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">contact@binoj.dev</p>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">binojmadhuranga2002.04.04@gmail.com</p>
               </div>
             </div>
           </a>
 
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/binoj-madhuranga/"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-lg hover:-translate-y-1"
@@ -50,7 +50,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://github.com"
+            href="https://github.com/binojmadhuranga"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-500 dark:hover:border-zinc-500 transition-all hover:shadow-lg hover:-translate-y-1"
@@ -69,7 +69,7 @@ export default function Contact() {
           </a>
 
           <a
-            href="https://twitter.com"
+            href="https://x.com/labugamage"
             target="_blank"
             rel="noopener noreferrer"
             className="group p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-cyan-500 dark:hover:border-cyan-500 transition-all hover:shadow-lg hover:-translate-y-1"
@@ -97,10 +97,10 @@ export default function Contact() {
             I'm always open to discussing new projects and opportunities.
           </p>
           <a
-            href="mailto:contact@binoj.dev"
+            href="https://www.linkedin.com/in/binoj-madhuranga/"
             className="inline-block px-8 py-4 rounded-full bg-zinc-900 text-white dark:bg-zinc-50 dark:text-zinc-900 font-medium hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors"
           >
-            Send me an email
+            Send Me a Message
           </a>
         </div>
       </div>
