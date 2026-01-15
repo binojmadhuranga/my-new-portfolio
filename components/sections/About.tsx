@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-zinc-900">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50 mb-4">
@@ -43,10 +43,10 @@ export default function About() {
           </div>
           <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
             <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">
-              30+
+              3.0+ GPA
             </div>
             <div className="text-zinc-600 dark:text-zinc-400 font-medium">
-              Happy Clients
+              Strong Academic Background
             </div>
           </div>
         </div>

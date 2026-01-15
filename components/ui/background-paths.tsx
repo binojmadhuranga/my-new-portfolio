@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 function FloatingPaths({ position }: { position: number }) {
     const paths = Array.from({ length: 36 }, (_, i) => ({
         id: i,
-        d: `M-${380 - i * 5 * position} -${189 + i * 6}C-${
-            380 - i * 5 * position
-        } -${189 + i * 6} -${312 - i * 5 * position} ${216 - i * 6} ${
-            152 - i * 5 * position
-        } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${
-            684 - i * 5 * position
-        } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`,
+        d: `M${-200 + i * 5 * position} ${-250 + i * 4}C${
+            -150 + i * 5 * position
+        } ${-100 + i * 5} ${100 + i * 6 * position} ${0 + i * 4} ${
+            350 + i * 5 * position
+        } ${100 + i * 3}C${550 + i * 5 * position} ${180 + i * 3} ${
+            700 + i * 5 * position
+        } ${200 + i * 4} ${800 + i * 5 * position} ${220 + i * 3}`,
         color: `rgba(15,23,42,${0.1 + i * 0.03})`,
         width: 0.5 + i * 0.03,
     }));
