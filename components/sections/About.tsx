@@ -1,11 +1,41 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+
 export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black relative overflow-hidden">
+    <section ref={sectionRef} id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black relative overflow-hidden">
       {/* Background Image with Opacity - Mobile */}
       <div 
-        className="md:hidden absolute left-0 top-0 bottom-0 w-full opacity-55 dark:opacity-40 pointer-events-none dark:brightness-40"
+        className={`md:hidden absolute left-0 top-0 bottom-0 w-full opacity-55 dark:opacity-40 pointer-events-none dark:brightness-40 transition-all duration-2000 ease-out ${
+          isVisible 
+            ? 'scale-100 opacity-55 dark:opacity-40' 
+            : 'scale-75 opacity-0'
+        }`}
         style={{
           backgroundImage: 'url(/about.png)',
           backgroundSize: 'cover',
@@ -16,7 +46,11 @@ export default function About() {
       
       {/* Background Image with Opacity - Desktop */}
       <div 
-        className="hidden md:block absolute left-0 top-0 bottom-0 w-1/2 opacity-55 dark:opacity-40 pointer-events-none dark:brightness-50"
+        className={`hidden md:block absolute left-0 top-0 bottom-0 w-1/2 opacity-55 dark:opacity-40 pointer-events-none dark:brightness-50 transition-all duration-2000 ease-out ${
+          isVisible 
+            ? 'scale-100 opacity-55 dark:opacity-40' 
+            : 'scale-75 opacity-0'
+        }`}
         style={{
           backgroundImage: 'url(/about.png)',
           backgroundSize: 'cover',
