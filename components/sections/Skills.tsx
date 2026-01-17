@@ -38,7 +38,7 @@ export default function Skills() {
     { name: "Sequelize", logo: "/techstack/Sequelize.png" },
 
     // 🟧 AI / Data Science
-    { name: "Numpy", logo: "/techstack/Numpy.png" },
+    { name: "Numpy", logo: "/techstack/numpy.png" },
     { name: "Pandas", logo: "/techstack/Pandas.png" },
     { name: "TensorFlow", logo: "/techstack/TensorFlow.png" },
     { name: "Kaggle", logo: "/techstack/Kaggle.png" },
