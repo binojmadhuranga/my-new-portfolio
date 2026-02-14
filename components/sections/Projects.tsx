@@ -25,7 +25,7 @@ export default function Projects() {
       description: "A modern business management platform that helps small and medium businesses manage sales, customers, inventory, and operations efficiently.",
       image: "/projects/smartbiz.png",
       tags: ["Spring Boot", "Hibernate", "Node.js", "React.js", "OpenAI", "Tailwind"],
-      demoLink: "",
+      demoLink: "https://www.linkedin.com/posts/binoj-madhuranga_smartbiz-saas-productupdate-ugcPost-7424020335223693312-nSYZ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEtcVf4BGJkmZE9RHJogysB5Bys_uJKhYVU",
       githubLink: "https://github.com/stars/binojmadhuranga/lists/smart-biz",
     },
     {
