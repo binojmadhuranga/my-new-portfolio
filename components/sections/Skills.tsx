@@ -12,6 +12,7 @@ export default function Skills() {
     { name: "C", logo: "/techstack/C.png" },
     { name: "Java", logo: "/techstack/Java.png" },
     { name: "C#", logo: "/techstack/Csharp.png" },
+    { name: "Go", logo: "/techstack/Go.png" },
     { name: "PHP", logo: "/techstack/PHP.png" },
     { name: "Python", logo: "/techstack/Python.png" },
 
@@ -28,12 +29,13 @@ export default function Skills() {
     { name: "Express", logo: "/techstack/Express.png" },
     { name: "Flask", logo: "/techstack/Flask.png" },
     { name: "Spring", logo: "/techstack/Spring.png" },
-    { name: "Hibernate", logo: "/techstack/Hibernate.png" },
     { name: ".NET Core", logo: "/techstack/NET core.png" },
+    
 
     // 🟪 Databases & ORM
     { name: "MongoDB", logo: "/techstack/MongoDB.png" },
     { name: "MySQL", logo: "/techstack/MySQL.png" },
+    { name: "Hibernate", logo: "/techstack/Hibernate.png" },
     { name: "PostgreSQL", logo: "/techstack/PostgresSQL.png" },
     { name: "Sequelize", logo: "/techstack/Sequelize.png" },
 
