@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 
 export default function Hero() {
@@ -61,9 +62,13 @@ export default function Hero() {
                 {/* Dark gradient overlay at bottom */}
                 <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black via-black/50 to-transparent pointer-events-none z-10"></div>
                 
-                <img 
-                  src="/profile.png" 
-                  alt="Binoj Madhuranga" 
+                <Image
+                  src="/profile.png"
+                  alt="Binoj Madhuranga"
+                  width={720}
+                  height={720}
+                  priority
+                  sizes="(min-width: 1024px) 40vw, (min-width: 640px) 50vw, 90vw"
                   className="max-w-md lg:max-w-xl w-full h-auto object-contain transition-all duration-500 relative z-0"
                   style={{
                     filter: 'drop-shadow(0 0 8px rgba(71, 85, 105, 0.4)) drop-shadow(0 0 36px rgba(30, 58, 138, 0.3)) drop-shadow(0 0 24px rgba(100, 116, 139, 0.2))'

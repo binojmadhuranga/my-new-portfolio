@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -21,9 +23,11 @@ export default function ProjectCard({
     <div className="group relative overflow-hidden rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300 hover:shadow-xl">
       {/* Project Image */}
       <div className="relative h-48 overflow-hidden bg-zinc-100 dark:bg-zinc-800">
-        <img 
-          src={image} 
+        <Image
+          src={image}
           alt={title}
+          fill
+          sizes="(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw"
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
