@@ -55,8 +55,10 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-zinc-900">
-      <div className="max-w-7xl mx-auto">
+    <section id="projects" className="relative overflow-hidden bg-[linear-gradient(180deg,#f7f7f8_0%,#ededee_48%,#f8f8f8_100%)] px-4 py-20 sm:px-6 lg:px-8 dark:bg-[linear-gradient(180deg,#18181b_0%,#101014_48%,#17171a_100%)]">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.85),transparent_68%)] dark:bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_68%)]" />
+      <div className="pointer-events-none absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-zinc-300/35 blur-3xl dark:bg-zinc-500/10" />
+      <div className="relative mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50 mb-4">
             Featured Projects
@@ -66,7 +68,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
