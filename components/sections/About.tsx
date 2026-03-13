@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function About() {
@@ -29,35 +30,22 @@ export default function About() {
 
   return (
     <section ref={sectionRef} id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black relative overflow-hidden">
-      {/* Background Image with Opacity - Mobile */}
       <div 
-        className={`md:hidden absolute left-0 top-0 bottom-0 w-full opacity-55 dark:opacity-40 pointer-events-none dark:brightness-40 transition-all duration-2000 ease-out ${
+        className={`absolute left-0 top-0 bottom-0 w-full md:w-1/2 opacity-55 dark:opacity-40 pointer-events-none dark:brightness-50 transition-all duration-2000 ease-out ${
           isVisible 
             ? 'scale-100 opacity-55 dark:opacity-40' 
             : 'scale-75 opacity-0'
         }`}
-        style={{
-          backgroundImage: 'url(/about.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: '70% top',
-          backgroundRepeat: 'no-repeat'
-        }}
-      ></div>
-      
-      {/* Background Image with Opacity - Desktop */}
-      <div 
-        className={`hidden md:block absolute left-0 top-0 bottom-0 w-1/2 opacity-55 dark:opacity-40 pointer-events-none dark:brightness-50 transition-all duration-2000 ease-out ${
-          isVisible 
-            ? 'scale-100 opacity-55 dark:opacity-40' 
-            : 'scale-75 opacity-0'
-        }`}
-        style={{
-          backgroundImage: 'url(/about.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: '30% 30%',
-          backgroundRepeat: 'no-repeat'
-        }}
-      ></div>
+      >
+        <Image
+          src="/about.png"
+          alt=""
+          fill
+          aria-hidden="true"
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover object-[70%_top] md:object-[30%_30%]"
+        />
+      </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-12">
@@ -81,9 +69,11 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
           <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20">
             <div className="flex justify-center mb-3">
-              <img
+              <Image
                 src="/uni_logo.png"
                 alt="Sabaragamuwa University"
+                width={64}
+                height={64}
                 className="w-16 h-16 object-contain shadow-lg rounded-full"
               />
             </div>
