@@ -1,62 +1,97 @@
 "use client";
 
-import Image from "next/image";
+import type { IconType } from "react-icons";
+import { FaAws, FaJava } from "react-icons/fa6";
+import {
+  SiAndroidstudio,
+  SiC,
+  SiCss,
+  SiDocker,
+  SiDotnet,
+  SiExpo,
+  SiExpress,
+  SiFigma,
+  SiFlask,
+  SiGit,
+  SiGithub,
+  SiGo,
+  SiHibernate,
+  SiHtml5,
+  SiIntellijidea,
+  SiJavascript,
+  SiJenkins,
+  SiKaggle,
+  SiLinux,
+  SiMongodb,
+  SiMysql,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPandas,
+  SiPhp,
+  SiPostgresql,
+  SiPostman,
+  SiPython,
+  SiReact,
+  SiRedux,
+  SiSequelize,
+  SiSpring,
+  SiTailwindcss,
+  SiTensorflow,
+  SiTypescript,
+  SiUbuntu,
+} from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+import { VscVscode } from "react-icons/vsc";
+
+type TechItem = {
+  name: string;
+  icon: IconType;
+  iconClassName: string;
+};
 
 export default function Skills() {
-  const techStack = [
-    // 🟦 Programming Languages (Basics → Advanced)
-    { name: "HTML5", logo: "/techstack/HTML5.png" },
-    { name: "CSS3", logo: "/techstack/CSS3.png" },
-    { name: "JavaScript", logo: "/techstack/JavaScript.png" },
-    { name: "TypeScript", logo: "/techstack/TypeScript.png" },
-    { name: "C", logo: "/techstack/C.png" },
-    { name: "Java", logo: "/techstack/Java.png" },
-    { name: "C#", logo: "/techstack/Csharp.png" },
-    { name: "Go", logo: "/techstack/Go.png" },
-    { name: "PHP", logo: "/techstack/PHP.png" },
-    { name: "Python", logo: "/techstack/Python.png" },
-
-    // 🟩 Frontend Frameworks & Libraries
-    { name: "React", logo: "/techstack/React.png" },
-    { name: "Next.js", logo: "/techstack/Next.js.png" },
-    { name: "React Native", logo: "/techstack/React.png" },
-    { name: "Expo", logo: "/techstack/Expo.png" },
-    { name: "Redux", logo: "/techstack/Redux.png" },
-    { name: "Tailwind CSS", logo: "/techstack/Tailwind CSS.png" },
-
-    // 🟨 Backend Frameworks & Technologies
-    { name: "Node.js", logo: "/techstack/Node.js.png" },
-    { name: "Express", logo: "/techstack/Express.png" },
-    { name: "Flask", logo: "/techstack/Flask.png" },
-    { name: "Spring", logo: "/techstack/Spring.png" },
-    { name: ".NET Core", logo: "/techstack/NET core.png" },
-    
-
-    // 🟪 Databases & ORM
-    { name: "MongoDB", logo: "/techstack/MongoDB.png" },
-    { name: "MySQL", logo: "/techstack/MySQL.png" },
-    { name: "Hibernate", logo: "/techstack/Hibernate.png" },
-    { name: "PostgreSQL", logo: "/techstack/PostgresSQL.png" },
-    { name: "Sequelize", logo: "/techstack/Sequelize.png" },
-
-    // 🟧 AI / Data Science
-    { name: "Pandas", logo: "/techstack/Pandas.png" },
-    { name: "TensorFlow", logo: "/techstack/TensorFlow.png" },
-    { name: "Kaggle", logo: "/techstack/Kaggle.png" },
-
-    // 🟥 Tools, DevOps & Platforms
-    { name: "Git", logo: "/techstack/Git.png" },
-    { name: "GitHub", logo: "/techstack/GitHub.png" },
-    { name: "Docker", logo: "/techstack/Docker.png" },
-    { name: "AWS", logo: "/techstack/AWS.png" },
-    { name: "Jenkins", logo: "/techstack/Jenkins.png" },
-    { name: "Linux", logo: "/techstack/Linux.png" },
-    { name: "Ubuntu", logo: "/techstack/Ubuntu.png" },
-    { name: "Postman", logo: "/techstack/Postman.png" },
-    { name: "Android Studio", logo: "/techstack/Android Studio.png" },
-    { name: "IntelliJ IDEA", logo: "/techstack/IntelliJ IDEA.png" },
-    { name: "VS Code", logo: "/techstack/Visual Studio Code (VS Code).png" },
-    { name: "Figma", logo: "/techstack/Figma.png" },
+  const techStack: TechItem[] = [
+    { name: "HTML5", icon: SiHtml5, iconClassName: "text-orange-500" },
+    { name: "CSS3", icon: SiCss, iconClassName: "text-sky-500" },
+    { name: "JavaScript", icon: SiJavascript, iconClassName: "text-yellow-300" },
+    { name: "TypeScript", icon: SiTypescript, iconClassName: "text-blue-500" },
+    { name: "C", icon: SiC, iconClassName: "text-blue-400" },
+    { name: "Java", icon: FaJava, iconClassName: "text-orange-400" },
+    { name: "C#", icon: TbBrandCSharp, iconClassName: "text-violet-400" },
+    { name: "Go", icon: SiGo, iconClassName: "text-cyan-400" },
+    { name: "PHP", icon: SiPhp, iconClassName: "text-indigo-300" },
+    { name: "Python", icon: SiPython, iconClassName: "text-yellow-400" },
+    { name: "React", icon: SiReact, iconClassName: "text-cyan-300" },
+    { name: "Next.js", icon: SiNextdotjs, iconClassName: "text-zinc-100" },
+    { name: "React Native", icon: SiReact, iconClassName: "text-cyan-300" },
+    { name: "Expo", icon: SiExpo, iconClassName: "text-zinc-100" },
+    { name: "Redux", icon: SiRedux, iconClassName: "text-violet-400" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, iconClassName: "text-sky-400" },
+    { name: "Node.js", icon: SiNodedotjs, iconClassName: "text-lime-400" },
+    { name: "Express", icon: SiExpress, iconClassName: "text-zinc-200" },
+    { name: "Flask", icon: SiFlask, iconClassName: "text-zinc-100" },
+    { name: "Spring", icon: SiSpring, iconClassName: "text-lime-400" },
+    { name: ".NET Core", icon: SiDotnet, iconClassName: "text-violet-400" },
+    { name: "MongoDB", icon: SiMongodb, iconClassName: "text-green-500" },
+    { name: "MySQL", icon: SiMysql, iconClassName: "text-sky-500" },
+    { name: "Hibernate", icon: SiHibernate, iconClassName: "text-amber-200" },
+    { name: "PostgreSQL", icon: SiPostgresql, iconClassName: "text-blue-300" },
+    { name: "Sequelize", icon: SiSequelize, iconClassName: "text-sky-400" },
+    { name: "Pandas", icon: SiPandas, iconClassName: "text-indigo-400" },
+    { name: "TensorFlow", icon: SiTensorflow, iconClassName: "text-orange-400" },
+    { name: "Kaggle", icon: SiKaggle, iconClassName: "text-sky-400" },
+    { name: "Git", icon: SiGit, iconClassName: "text-orange-500" },
+    { name: "GitHub", icon: SiGithub, iconClassName: "text-zinc-100" },
+    { name: "Docker", icon: SiDocker, iconClassName: "text-sky-400" },
+    { name: "AWS", icon: FaAws, iconClassName: "text-amber-300" },
+    { name: "Jenkins", icon: SiJenkins, iconClassName: "text-red-300" },
+    { name: "Linux", icon: SiLinux, iconClassName: "text-yellow-200" },
+    { name: "Ubuntu", icon: SiUbuntu, iconClassName: "text-orange-500" },
+    { name: "Postman", icon: SiPostman, iconClassName: "text-orange-400" },
+    { name: "Android Studio", icon: SiAndroidstudio, iconClassName: "text-emerald-400" },
+    { name: "IntelliJ IDEA", icon: SiIntellijidea, iconClassName: "text-pink-400" },
+    { name: "VS Code", icon: VscVscode, iconClassName: "text-blue-400" },
+    { name: "Figma", icon: SiFigma, iconClassName: "text-pink-400" },
   ];
 
 
@@ -82,14 +117,8 @@ export default function Skills() {
               className="group p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-lg hover:-translate-y-1"
             >
               <div className="flex flex-col items-center gap-3">
-                <div className="w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Image
-                    src={tech.logo}
-                    alt={tech.name}
-                    width={48}
-                    height={48}
-                    className="object-contain"
-                  />
+                <div className="flex h-12 w-12 items-center justify-center transition-transform group-hover:scale-110">
+                  <tech.icon className={`h-12 w-12 ${tech.iconClassName}`} aria-hidden="true" />
                 </div>
                 <h4 className="text-xs font-semibold text-zinc-900 dark:text-zinc-50 text-center">
                   {tech.name}
