@@ -95,7 +95,9 @@ export default function Navbar() {
 
           <div className="hidden items-center gap-3 md:flex">
             <a
-              href="#"
+              href="https://medium.com/@binojmadhuranga"
+              target="_blank"
+              rel="noreferrer"
               aria-label="Blogs"
               className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(15,23,42,0.2)] transition-transform duration-300 hover:-translate-y-0.5 dark:border-white/10 dark:bg-white dark:text-black"
             >
@@ -158,7 +160,13 @@ export default function Navbar() {
               })}
 
               <div className="mt-2 flex items-center justify-between gap-3 rounded-2xl bg-black px-4 py-3 text-white dark:bg-white dark:text-black">
-                <a href="#" onClick={() => setIsMenuOpen(false)} className="inline-flex items-center gap-2 text-sm font-semibold">
+                <a
+                  href="https://medium.com/@binojmadhuranga"
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="inline-flex items-center gap-2 text-sm font-semibold"
+                >
                   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.75 6.75A2.75 2.75 0 0 1 7.5 4h9A2.75 2.75 0 0 1 19.25 6.75v10.5A2.75 2.75 0 0 1 16.5 20h-9a2.75 2.75 0 0 1-2.75-2.75V6.75Z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M8.5 7.75h3.75a1 1 0 0 1 1 1v10.5m-4.75-11.5v8.75m10.5-8.75h-4.75" />
