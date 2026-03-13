@@ -2,20 +2,24 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+import ProfileCard from "@/components/ui/profileCard";
+
+const navLinks = [
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
-  ];
+  const [isProfileCardOpen, setIsProfileCardOpen] = useState(false);
+  const profileCardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,6 +50,32 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (!isProfileCardOpen) {
+      return;
+    }
+
+    const handlePointerDown = (event: MouseEvent) => {
+      if (!profileCardRef.current?.contains(event.target as Node)) {
+        setIsProfileCardOpen(false);
+      }
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsProfileCardOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isProfileCardOpen]);
+
   const linkBaseClass =
     "relative rounded-full px-4 py-2 text-sm font-medium tracking-[0.01em] transition-all duration-300";
 
@@ -53,11 +83,11 @@ export default function Navbar() {
     <nav className="fixed inset-x-0 top-4 z-50 px-3 sm:px-4 lg:px-6">
       <div
         className={[
-          "relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-black/15 bg-[linear-gradient(135deg,rgba(255,255,255,0.78),rgba(226,232,240,0.62),rgba(212,212,216,0.72))] shadow-[0_16px_50px_rgba(15,23,42,0.12)] backdrop-blur-2xl transition-all duration-500 dark:border-white/10 dark:bg-[linear-gradient(135deg,rgba(39,39,42,0.82),rgba(24,24,27,0.75),rgba(63,63,70,0.78))]",
+          "relative mx-auto max-w-7xl overflow-visible rounded-[999px] bg-[linear-gradient(135deg,rgba(255,255,255,0.84),rgba(226,232,240,0.7),rgba(212,212,216,0.78))] shadow-[0_18px_52px_rgba(15,23,42,0.12)] ring-1 ring-white/55 backdrop-blur-2xl transition-all duration-500 dark:bg-[linear-gradient(135deg,rgba(39,39,42,0.88),rgba(24,24,27,0.82),rgba(63,63,70,0.84))] dark:ring-white/15",
           isScrolled ? "shadow-[0_22px_60px_rgba(15,23,42,0.18)]" : "",
         ].join(" ")}
       >
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.75),transparent_32%),radial-gradient(circle_at_75%_30%,rgba(161,161,170,0.3),transparent_22%),radial-gradient(circle_at_bottom_right,rgba(212,212,216,0.45),transparent_28%)] opacity-90" />
+        <div className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.75),transparent_32%),radial-gradient(circle_at_75%_30%,rgba(161,161,170,0.3),transparent_22%),radial-gradient(circle_at_bottom_right,rgba(212,212,216,0.45),transparent_28%)] opacity-90" />
         <div className="pointer-events-none absolute -left-16 top-1/2 h-32 w-32 -translate-y-1/2 rounded-full bg-white/30 blur-3xl animate-[liquidDrift_16s_ease-in-out_infinite] dark:bg-white/10" />
         <div className="pointer-events-none absolute right-0 top-0 h-24 w-24 rounded-full bg-zinc-400/20 blur-3xl animate-[liquidPulse_10s_ease-in-out_infinite] dark:bg-zinc-200/10" />
 
@@ -108,14 +138,27 @@ export default function Navbar() {
               Blogs
             </a>
 
-            <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-white/80 bg-zinc-200 shadow-[0_0_0_2px_rgba(255,255,255,0.55),0_10px_24px_rgba(15,23,42,0.16)] dark:border-zinc-700 dark:bg-zinc-900">
-              <Image
-                src="/profile.png"
-                alt="Binoj Madhuranga"
-                fill
-                sizes="48px"
-                className="object-cover"
-                priority
+            <div ref={profileCardRef} className="relative">
+              <button
+                type="button"
+                onClick={() => setIsProfileCardOpen((current) => !current)}
+                aria-label="Open profile card"
+                aria-expanded={isProfileCardOpen}
+                className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-white/80 bg-zinc-200 shadow-[0_0_0_2px_rgba(255,255,255,0.55),0_10px_24px_rgba(15,23,42,0.16)] transition-transform duration-300 hover:scale-105 dark:border-zinc-700 dark:bg-zinc-900"
+              >
+                <Image
+                  src="/profile.png"
+                  alt="Binoj Madhuranga"
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                  priority
+                />
+              </button>
+
+              <ProfileCard
+                isOpen={isProfileCardOpen}
+                onClose={() => setIsProfileCardOpen(false)}
               />
             </div>
           </div>
