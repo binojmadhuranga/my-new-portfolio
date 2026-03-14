@@ -22,6 +22,34 @@ export default function Navbar() {
   const profileCardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isMenuOpen]);
+
+  useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 16);
@@ -83,13 +111,14 @@ export default function Navbar() {
     <nav className="fixed inset-x-0 top-4 z-50 px-3 sm:px-4 lg:px-6">
       <div
         className={[
-          "relative mx-auto max-w-7xl overflow-visible rounded-[999px] bg-[linear-gradient(135deg,rgba(255,255,255,0.84),rgba(226,232,240,0.7),rgba(212,212,216,0.78))] shadow-[0_18px_52px_rgba(15,23,42,0.12)] ring-1 ring-white/55 backdrop-blur-2xl transition-all duration-500 dark:bg-[linear-gradient(135deg,rgba(39,39,42,0.88),rgba(24,24,27,0.82),rgba(63,63,70,0.84))] dark:ring-white/15",
+          "relative mx-auto max-w-7xl overflow-hidden bg-[linear-gradient(135deg,rgba(255,255,255,0.84),rgba(226,232,240,0.7),rgba(212,212,216,0.78))] shadow-[0_18px_52px_rgba(15,23,42,0.12)] ring-1 ring-white/55 backdrop-blur-2xl transition-all duration-500 dark:bg-[linear-gradient(135deg,rgba(39,39,42,0.88),rgba(24,24,27,0.82),rgba(63,63,70,0.84))] dark:ring-white/15",
+          isMenuOpen ? "rounded-[2rem]" : "rounded-[999px]",
           isScrolled ? "shadow-[0_22px_60px_rgba(15,23,42,0.18)]" : "",
         ].join(" ")}
       >
         <div className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.75),transparent_32%),radial-gradient(circle_at_75%_30%,rgba(161,161,170,0.3),transparent_22%),radial-gradient(circle_at_bottom_right,rgba(212,212,216,0.45),transparent_28%)] opacity-90" />
-        <div className="pointer-events-none absolute -left-16 top-1/2 h-32 w-32 -translate-y-1/2 rounded-full bg-white/30 blur-3xl animate-[liquidDrift_16s_ease-in-out_infinite] dark:bg-white/10" />
-        <div className="pointer-events-none absolute right-0 top-0 h-24 w-24 rounded-full bg-zinc-400/20 blur-3xl animate-[liquidPulse_10s_ease-in-out_infinite] dark:bg-zinc-200/10" />
+        <div className="pointer-events-none absolute -left-16 top-1/2 hidden h-32 w-32 -translate-y-1/2 rounded-full bg-white/30 blur-3xl animate-[liquidDrift_16s_ease-in-out_infinite] md:block dark:bg-white/10" />
+        <div className="pointer-events-none absolute right-0 top-0 hidden h-24 w-24 rounded-full bg-zinc-400/20 blur-3xl animate-[liquidPulse_10s_ease-in-out_infinite] md:block dark:bg-zinc-200/10" />
 
         <div className="relative flex min-h-[78px] items-center justify-between gap-4 px-5 py-3 sm:px-7">
           <Link
@@ -167,6 +196,8 @@ export default function Navbar() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white/50 text-zinc-900 transition-colors hover:bg-white/70 md:hidden dark:border-white/10 dark:bg-white/6 dark:text-white dark:hover:bg-white/10"
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-nav-menu"
           >
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {isMenuOpen ? (
@@ -179,8 +210,11 @@ export default function Navbar() {
         </div>
 
         {isMenuOpen && (
-          <div className="relative border-t border-black/8 px-5 pb-5 pt-3 md:hidden dark:border-white/8">
-            <div className="flex flex-col gap-2 rounded-[1.75rem] bg-white/45 p-3 backdrop-blur-xl dark:bg-white/6">
+          <div
+            id="mobile-nav-menu"
+            className="relative z-10 border-t border-black/8 px-5 pb-5 pt-3 md:hidden dark:border-white/8"
+          >
+            <div className="flex flex-col gap-2 rounded-[1.75rem] border border-black/8 bg-white/70 p-3 backdrop-blur-xl dark:border-white/10 dark:bg-zinc-900/70">
               {navLinks.map((link) => {
                 const sectionId = link.href.replace("#", "");
                 const isActive = activeSection === sectionId;
