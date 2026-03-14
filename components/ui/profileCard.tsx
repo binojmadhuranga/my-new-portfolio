@@ -48,7 +48,7 @@ export default function ProfileCard({ isOpen, onClose }: ProfileCardProps) {
 					animate={{ opacity: 1, y: 0, scale: 1 }}
 					exit={{ opacity: 0, y: -12, scale: 0.97 }}
 					transition={{ duration: 0.22, ease: "easeOut" }}
-					className="absolute right-0 top-[calc(100%+1rem)] z-50 w-[22rem] overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-[0_24px_60px_rgba(15,23,42,0.18)]"
+					className="absolute right-0 top-[calc(100%+1rem)] z-[80] w-[22rem] overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-[0_24px_60px_rgba(15,23,42,0.18)]"
 				>
 					<div className="relative h-20 bg-[linear-gradient(120deg,#0f172a,#334155,#0f172a)]">
 						<button
