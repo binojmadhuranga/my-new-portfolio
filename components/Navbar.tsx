@@ -111,7 +111,7 @@ export default function Navbar() {
     <nav className="fixed inset-x-0 top-4 z-50 px-3 sm:px-4 lg:px-6">
       <div
         className={[
-          "relative mx-auto max-w-7xl overflow-hidden bg-[linear-gradient(135deg,rgba(255,255,255,0.84),rgba(226,232,240,0.7),rgba(212,212,216,0.78))] shadow-[0_18px_52px_rgba(15,23,42,0.12)] ring-1 ring-white/55 backdrop-blur-2xl transition-all duration-500 dark:bg-[linear-gradient(135deg,rgba(39,39,42,0.88),rgba(24,24,27,0.82),rgba(63,63,70,0.84))] dark:ring-white/15",
+          "relative mx-auto max-w-7xl overflow-hidden md:overflow-visible bg-[linear-gradient(135deg,rgba(255,255,255,0.84),rgba(226,232,240,0.7),rgba(212,212,216,0.78))] shadow-[0_18px_52px_rgba(15,23,42,0.12)] ring-1 ring-white/55 backdrop-blur-2xl transition-all duration-500 dark:bg-[linear-gradient(135deg,rgba(39,39,42,0.88),rgba(24,24,27,0.82),rgba(63,63,70,0.84))] dark:ring-white/15",
           isMenuOpen ? "rounded-[2rem]" : "rounded-[999px]",
           isScrolled ? "shadow-[0_22px_60px_rgba(15,23,42,0.18)]" : "",
         ].join(" ")}
