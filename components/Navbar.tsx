@@ -111,25 +111,25 @@ export default function Navbar() {
     <nav className="fixed inset-x-0 top-4 z-50 px-3 sm:px-4 lg:px-6">
       <div
         className={[
-          "relative mx-auto max-w-7xl overflow-hidden md:overflow-visible bg-[linear-gradient(135deg,rgba(255,255,255,0.84),rgba(226,232,240,0.7),rgba(212,212,216,0.78))] shadow-[0_18px_52px_rgba(15,23,42,0.12)] ring-1 ring-white/55 backdrop-blur-2xl transition-all duration-500 dark:bg-[linear-gradient(135deg,rgba(39,39,42,0.88),rgba(24,24,27,0.82),rgba(63,63,70,0.84))] dark:ring-white/15",
+          "relative mx-auto max-w-7xl overflow-hidden md:overflow-visible bg-[linear-gradient(135deg,rgba(24,24,27,0.88),rgba(9,9,11,0.9),rgba(39,39,42,0.84))] shadow-[0_18px_52px_rgba(2,6,23,0.5)] ring-1 ring-white/10 backdrop-blur-2xl transition-all duration-500",
           isMenuOpen ? "rounded-[2rem]" : "rounded-[999px]",
-          isScrolled ? "shadow-[0_22px_60px_rgba(15,23,42,0.18)]" : "",
+          isScrolled ? "shadow-[0_22px_60px_rgba(2,6,23,0.68)]" : "",
         ].join(" ")}
       >
-        <div className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.75),transparent_32%),radial-gradient(circle_at_75%_30%,rgba(161,161,170,0.3),transparent_22%),radial-gradient(circle_at_bottom_right,rgba(212,212,216,0.45),transparent_28%)] opacity-90" />
-        <div className="pointer-events-none absolute -left-16 top-1/2 hidden h-32 w-32 -translate-y-1/2 rounded-full bg-white/30 blur-3xl animate-[liquidDrift_16s_ease-in-out_infinite] md:block dark:bg-white/10" />
-        <div className="pointer-events-none absolute right-0 top-0 hidden h-24 w-24 rounded-full bg-zinc-400/20 blur-3xl animate-[liquidPulse_10s_ease-in-out_infinite] md:block dark:bg-zinc-200/10" />
+        <div className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[radial-gradient(circle_at_top_left,rgba(96,165,250,0.22),transparent_30%),radial-gradient(circle_at_78%_26%,rgba(45,212,191,0.14),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(165,180,252,0.18),transparent_30%)] opacity-90" />
+        <div className="pointer-events-none absolute -left-16 top-1/2 hidden h-32 w-32 -translate-y-1/2 rounded-full bg-blue-300/10 blur-3xl animate-[liquidDrift_16s_ease-in-out_infinite] md:block" />
+        <div className="pointer-events-none absolute right-0 top-0 hidden h-24 w-24 rounded-full bg-teal-300/10 blur-3xl animate-[liquidPulse_10s_ease-in-out_infinite] md:block" />
 
         <div className="relative flex min-h-[78px] items-center justify-between gap-4 px-5 py-3 sm:px-7">
           <Link
             href="#home"
-            className="shrink-0 rounded-full px-3 py-2 text-2xl font-black tracking-tight text-black transition-colors hover:text-zinc-700 dark:text-white dark:hover:text-zinc-300"
+            className="shrink-0 rounded-full px-3 py-2 text-2xl font-black tracking-tight text-white transition-colors hover:text-blue-300"
           >
             BM
           </Link>
 
           <div className="hidden flex-1 items-center justify-center md:flex">
-            <div className="flex items-center gap-1 rounded-full border border-black/8 bg-white/35 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.65)] dark:border-white/8 dark:bg-white/5">
+            <div className="flex items-center gap-1 rounded-full border border-white/12 bg-white/5 p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
               {navLinks.map((link) => {
                 const sectionId = link.href.replace("#", "");
                 const isActive = activeSection === sectionId;
@@ -141,8 +141,8 @@ export default function Navbar() {
                     className={[
                       linkBaseClass,
                       isActive
-                        ? "bg-white/80 text-black shadow-[0_8px_20px_rgba(15,23,42,0.1)] dark:bg-white/12 dark:text-white"
-                        : "text-zinc-600 hover:bg-white/55 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-white/8 dark:hover:text-white",
+                        ? "bg-white/12 text-white shadow-[0_8px_20px_rgba(15,23,42,0.32)]"
+                        : "text-zinc-300 hover:bg-white/8 hover:text-white",
                     ].join(" ")}
                   >
                     {link.name}
@@ -158,7 +158,7 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
               aria-label="Blogs"
-              className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(15,23,42,0.2)] transition-transform duration-300 hover:-translate-y-0.5 dark:border-white/10 dark:bg-white dark:text-black"
+              className="inline-flex items-center gap-2 rounded-full border border-sky-300/35 bg-gradient-to-r from-sky-400 to-cyan-300 px-5 py-3 text-sm font-semibold text-zinc-950 shadow-[0_12px_24px_rgba(14,116,144,0.35)] transition-transform duration-300 hover:-translate-y-0.5"
             >
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.75 6.75A2.75 2.75 0 0 1 7.5 4h9A2.75 2.75 0 0 1 19.25 6.75v10.5A2.75 2.75 0 0 1 16.5 20h-9a2.75 2.75 0 0 1-2.75-2.75V6.75Z" />
@@ -173,7 +173,7 @@ export default function Navbar() {
                 onClick={() => setIsProfileCardOpen((current) => !current)}
                 aria-label="Open profile card"
                 aria-expanded={isProfileCardOpen}
-                className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-white/80 bg-zinc-200 shadow-[0_0_0_2px_rgba(255,255,255,0.55),0_10px_24px_rgba(15,23,42,0.16)] transition-transform duration-300 hover:scale-105 dark:border-zinc-700 dark:bg-zinc-900"
+                className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-zinc-700 bg-zinc-900 shadow-[0_0_0_2px_rgba(24,24,27,0.95),0_10px_24px_rgba(2,6,23,0.6)] transition-transform duration-300 hover:scale-105"
               >
                 <Image
                   src="/profile.png"
@@ -194,7 +194,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-black/10 bg-white/50 text-zinc-900 transition-colors hover:bg-white/70 md:hidden dark:border-white/10 dark:bg-white/6 dark:text-white dark:hover:bg-white/10"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 md:hidden"
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-nav-menu"
@@ -212,9 +212,9 @@ export default function Navbar() {
         {isMenuOpen && (
           <div
             id="mobile-nav-menu"
-            className="relative z-10 border-t border-black/8 px-5 pb-5 pt-3 md:hidden dark:border-white/8"
+            className="relative z-10 border-t border-white/8 px-5 pb-5 pt-3 md:hidden"
           >
-            <div className="flex flex-col gap-2 rounded-[1.75rem] border border-black/8 bg-white/70 p-3 backdrop-blur-xl dark:border-white/10 dark:bg-zinc-900/70">
+            <div className="flex flex-col gap-2 rounded-[1.75rem] border border-white/10 bg-zinc-900/70 p-3 backdrop-blur-xl">
               {navLinks.map((link) => {
                 const sectionId = link.href.replace("#", "");
                 const isActive = activeSection === sectionId;
@@ -227,8 +227,8 @@ export default function Navbar() {
                     className={[
                       "rounded-2xl px-4 py-3 text-sm font-medium transition-colors",
                       isActive
-                        ? "bg-white text-black shadow-[0_8px_20px_rgba(15,23,42,0.08)] dark:bg-white/12 dark:text-white"
-                        : "text-zinc-700 hover:bg-white/70 dark:text-zinc-200 dark:hover:bg-white/8",
+                        ? "bg-white/12 text-white shadow-[0_8px_20px_rgba(2,6,23,0.35)]"
+                        : "text-zinc-200 hover:bg-white/8",
                     ].join(" ")}
                   >
                     {link.name}
@@ -236,7 +236,7 @@ export default function Navbar() {
                 );
               })}
 
-              <div className="mt-2 flex items-center justify-between gap-3 rounded-2xl bg-black px-4 py-3 text-white dark:bg-white dark:text-black">
+              <div className="mt-2 flex items-center justify-between gap-3 rounded-2xl bg-zinc-950 px-4 py-3 text-white">
                 <a
                   href="https://medium.com/@binojmadhuranga"
                   target="_blank"
@@ -251,7 +251,7 @@ export default function Navbar() {
                   Blogs
                 </a>
 
-                <div className="relative h-10 w-10 overflow-hidden rounded-full border border-white/60 dark:border-zinc-400">
+                <div className="relative h-10 w-10 overflow-hidden rounded-full border border-zinc-600">
                   <Image
                     src="/profile.png"
                     alt="Binoj Madhuranga"

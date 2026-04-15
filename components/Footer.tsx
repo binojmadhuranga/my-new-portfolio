@@ -41,15 +41,15 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-white border-t border-zinc-200 dark:bg-black dark:border-zinc-800">
+    <footer className="bg-zinc-950 border-t border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand Section */}
           <div>
-            <h3 className="text-2xl font-bold text-zinc-900 dark:text-zinc-50 mb-3">
+            <h3 className="text-2xl font-bold text-zinc-50 mb-3">
               Binoj Madhuranga
             </h3>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">
+            <p className="text-sm text-zinc-400 mb-4">
               Full-stack Engineer, crafting modern applications with passion and precision.
             </p>
             <div className="flex gap-4">
@@ -59,7 +59,7 @@ export default function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+                  className="p-2 rounded-lg hover:bg-zinc-800 text-zinc-400 hover:text-zinc-50 transition-colors"
                   aria-label={link.name}
                 >
                   {link.icon}
@@ -70,7 +70,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50 mb-4">
+            <h4 className="text-sm font-semibold text-zinc-50 mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2">
@@ -78,7 +78,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+                    className="text-sm text-zinc-400 hover:text-zinc-50 transition-colors"
                   >
                     {link.name}
                   </a>
@@ -89,10 +89,10 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50 mb-4">
+            <h4 className="text-sm font-semibold text-zinc-50 mb-4">
               Get in Touch
             </h4>
-            <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
+            <ul className="space-y-2 text-sm text-zinc-400">
               <li>Email: binojmadhuranga2002.04.04@gmail.com</li>
               <li>Location: Gampaha, Sri Lanka</li>
               <li>Open to opportunities</li>
@@ -101,12 +101,12 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800">
+        <div className="pt-8 border-t border-zinc-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm text-zinc-400">
               © {currentYear} Binoj. All rights reserved.
             </p>
-            <p className="text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="text-sm text-zinc-400">
               Built with Next.js & Tailwind CSS
             </p>
           </div>

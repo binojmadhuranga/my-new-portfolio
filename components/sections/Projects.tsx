@@ -55,15 +55,15 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="relative overflow-hidden bg-[linear-gradient(180deg,#f7f7f8_0%,#ededee_48%,#f8f8f8_100%)] px-4 py-20 sm:px-6 lg:px-8 dark:bg-[linear-gradient(180deg,#18181b_0%,#101014_48%,#17171a_100%)]">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.85),transparent_68%)] dark:bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_68%)]" />
-      <div className="pointer-events-none absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-zinc-300/35 blur-3xl dark:bg-zinc-500/10" />
+    <section id="projects" className="relative overflow-hidden bg-[linear-gradient(180deg,#09090b_0%,#06070a_44%,#09090b_100%)] px-4 py-20 sm:px-6 lg:px-8">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.16),transparent_68%)]" />
+      <div className="pointer-events-none absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-blue-500/10 blur-3xl" />
       <div className="relative mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50 mb-4">
+          <h2 className="text-4xl font-bold text-zinc-50 mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and experience.
           </p>
         </div>
