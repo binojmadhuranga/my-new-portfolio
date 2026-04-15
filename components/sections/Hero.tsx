@@ -36,7 +36,7 @@ export default function Hero() {
                 View Projects
               </a>
               <a
-                href="/Binoj_Madhuranga.pdf"
+                href="/Binoj_MadhurangaCV.pdf"
                 download="Binoj_Madhuranga.pdf"
                 className="px-3 py-2 sm:px-8 sm:py-4 rounded-full border-2 border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-50 text-xs sm:text-base font-medium hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors whitespace-nowrap"
               >
