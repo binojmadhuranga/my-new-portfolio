@@ -62,14 +62,14 @@ export default function Skills() {
     { name: "PHP", icon: SiPhp, iconClassName: "text-indigo-300" },
     { name: "Python", icon: SiPython, iconClassName: "text-yellow-400" },
     { name: "React", icon: SiReact, iconClassName: "text-cyan-300" },
-    { name: "Next.js", icon: SiNextdotjs, iconClassName: "text-zinc-100" },
+    { name: "Next.js", icon: SiNextdotjs, iconClassName: "text-zinc-200" },
     { name: "React Native", icon: SiReact, iconClassName: "text-cyan-300" },
-    { name: "Expo", icon: SiExpo, iconClassName: "text-zinc-100" },
+    { name: "Expo", icon: SiExpo, iconClassName: "text-zinc-200" },
     { name: "Redux", icon: SiRedux, iconClassName: "text-violet-400" },
     { name: "Tailwind CSS", icon: SiTailwindcss, iconClassName: "text-sky-400" },
     { name: "Node.js", icon: SiNodedotjs, iconClassName: "text-lime-400" },
     { name: "Express", icon: SiExpress, iconClassName: "text-zinc-200" },
-    { name: "Flask", icon: SiFlask, iconClassName: "text-zinc-100" },
+    { name: "Flask", icon: SiFlask, iconClassName: "text-zinc-200" },
     { name: "Spring", icon: SiSpring, iconClassName: "text-lime-400" },
     { name: ".NET Core", icon: SiDotnet, iconClassName: "text-violet-400" },
     { name: "MongoDB", icon: SiMongodb, iconClassName: "text-green-500" },
@@ -81,7 +81,7 @@ export default function Skills() {
     { name: "TensorFlow", icon: SiTensorflow, iconClassName: "text-orange-400" },
     { name: "Kaggle", icon: SiKaggle, iconClassName: "text-sky-400" },
     { name: "Git", icon: SiGit, iconClassName: "text-orange-500" },
-    { name: "GitHub", icon: SiGithub, iconClassName: "text-zinc-100" },
+    { name: "GitHub", icon: SiGithub, iconClassName: "text-zinc-200" },
     { name: "Docker", icon: SiDocker, iconClassName: "text-sky-400" },
     { name: "AWS", icon: FaAws, iconClassName: "text-amber-300" },
     { name: "Jenkins", icon: SiJenkins, iconClassName: "text-red-300" },
@@ -98,14 +98,14 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-950/80"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50 mb-4">
+          <h2 className="text-4xl font-bold text-zinc-50 mb-4">
             Tech Stack
           </h2>
-          <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
             Technologies and tools I use to bring ideas to life
           </p>
         </div>
@@ -114,13 +114,13 @@ export default function Skills() {
           {techStack.map((tech) => (
             <div
               key={tech.name}
-              className="group p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-lg hover:-translate-y-1"
+              className="group p-4 rounded-2xl bg-[linear-gradient(160deg,rgba(39,39,42,0.7),rgba(24,24,27,0.92))] border border-zinc-800 hover:border-sky-400/60 transition-all hover:shadow-[0_18px_45px_-30px_rgba(56,189,248,0.55)] hover:-translate-y-1"
             >
               <div className="flex flex-col items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center transition-transform group-hover:scale-110">
                   <tech.icon className={`h-12 w-12 ${tech.iconClassName}`} aria-hidden="true" />
                 </div>
-                <h4 className="text-xs font-semibold text-zinc-900 dark:text-zinc-50 text-center">
+                <h4 className="text-xs font-semibold text-zinc-100 text-center">
                   {tech.name}
                 </h4>
               </div>
