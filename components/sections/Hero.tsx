@@ -16,29 +16,29 @@ export default function Hero() {
           {/* Text Content */}
           <div className="space-y-6 relative">
             
-            <h1 className="text-5xl md:text-6xl font-bold text-zinc-900 dark:text-zinc-50 leading-tight">
-              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-700 via-blue-900 to-slate-800 dark:from-slate-200 dark:via-blue-400 dark:to-slate-300">Binoj Madhuranga</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-zinc-50 leading-tight">
+              Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-blue-400 to-teal-300">Binoj Madhuranga</span>
             </h1>
-            <p className="text-xl text-white  leading-relaxed">
+            <p className="text-xl text-zinc-300 leading-relaxed">
               Software Engineer designing scalable solutions across Web, Mobile, AI, and IoT using modern technologies.
             </p>
             <div className="flex gap-2 sm:gap-4">
               <a
                 href="#contact"
-                className="px-3 py-2 sm:px-8 sm:py-4 rounded-full bg-zinc-900 text-white text-xs sm:text-base font-medium hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 transition-colors whitespace-nowrap"
+                className="px-3 py-2 sm:px-8 sm:py-4 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-zinc-950 text-xs sm:text-base font-semibold hover:from-blue-400 hover:to-cyan-300 transition-colors whitespace-nowrap"
               >
                 Get in Touch
               </a>
               <a
                 href="#projects"
-                className="px-3 py-2 sm:px-8 sm:py-4 rounded-full border-2 border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-50 text-xs sm:text-base font-medium hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors whitespace-nowrap"
+                className="px-3 py-2 sm:px-8 sm:py-4 rounded-full border-2 border-zinc-700 text-zinc-100 text-xs sm:text-base font-medium hover:bg-zinc-900 transition-colors whitespace-nowrap"
               >
                 View Projects
               </a>
               <a
                 href="/Binoj_MadhurangaCV.pdf"
                 download="Binoj_Madhuranga.pdf"
-                className="px-3 py-2 sm:px-8 sm:py-4 rounded-full border-2 border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-50 text-xs sm:text-base font-medium hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors whitespace-nowrap"
+                className="px-3 py-2 sm:px-8 sm:py-4 rounded-full border-2 border-zinc-700 text-zinc-100 text-xs sm:text-base font-medium hover:bg-zinc-900 transition-colors whitespace-nowrap"
               >
                 Download CV
               </a>
@@ -49,10 +49,10 @@ export default function Hero() {
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative inline-block group animate-[popup_1.5s_ease-out]">
               {/* Animated corner decorations */}
-              <div className="hidden md:block absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-slate-700 dark:border-slate-400 rounded-tl-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-top-6 group-hover:-left-6 opacity-10 group-hover:opacity-70"></div>
-              <div className="hidden md:block absolute -top-4 -right-4 w-20 h-20 border-t-4 border-r-4 border-blue-900 dark:border-blue-500 rounded-tr-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-top-6 group-hover:-right-6 opacity-20 group-hover:opacity-70"></div>
-              <div className="hidden md:block absolute -bottom-4 -left-4 w-20 h-20 border-b-4 border-l-4 border-zinc-600 dark:border-zinc-500 rounded-bl-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-bottom-6 group-hover:-left-6 opacity-10 group-hover:opacity-70"></div>
-              <div className="hidden md:block absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-slate-800 dark:border-slate-300 rounded-br-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-bottom-6 group-hover:-right-6 opacity-10 group-hover:opacity-70"></div>
+              <div className="hidden md:block absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-sky-300 rounded-tl-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-top-6 group-hover:-left-6 opacity-20 group-hover:opacity-80"></div>
+              <div className="hidden md:block absolute -top-4 -right-4 w-20 h-20 border-t-4 border-r-4 border-blue-500 rounded-tr-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-top-6 group-hover:-right-6 opacity-20 group-hover:opacity-80"></div>
+              <div className="hidden md:block absolute -bottom-4 -left-4 w-20 h-20 border-b-4 border-l-4 border-teal-400 rounded-bl-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-bottom-6 group-hover:-left-6 opacity-20 group-hover:opacity-80"></div>
+              <div className="hidden md:block absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-indigo-300 rounded-br-3xl transition-all duration-700 group-hover:w-24 group-hover:h-24 group-hover:-bottom-6 group-hover:-right-6 opacity-20 group-hover:opacity-80"></div>
               
               {/* Animated highlighted square background with subtle shadow */}
               <div className="absolute inset-0 bg-gradient-to-br from-slate-700 via-blue-900 to-zinc-800 rounded-3xl opacity-8 animate-[squarePulse_4s_ease-in-out_infinite] shadow-[0_0_40px_rgba(71,85,105,0.15),0_0_80px_rgba(30,58,138,0.1),inset_0_0_60px_rgba(100,116,139,0.08)]"></div>

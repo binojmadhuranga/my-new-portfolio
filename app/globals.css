@@ -43,3 +43,35 @@
     opacity: 0.82;
   }
 }
+
+html,
+body {
+  background: #030303;
+  color: #e4e4e7;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 15% -10%, rgba(59, 130, 246, 0.12), transparent 38%),
+    radial-gradient(circle at 85% 110%, rgba(20, 184, 166, 0.1), transparent 34%),
+    linear-gradient(180deg, #020203 0%, #05070d 45%, #030304 100%);
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+  color: #f8fafc;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(24, 24, 27, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #334155, #0f172a);
+  border-radius: 999px;
+  border: 2px solid rgba(24, 24, 27, 0.9);
+}
