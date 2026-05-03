@@ -158,7 +158,7 @@ export default function Navbar() {
               target="_blank"
               rel="noreferrer"
               aria-label="Blogs"
-              className="inline-flex items-center gap-2 rounded-full border border-sky-300/35 bg-gradient-to-r from-sky-400 to-cyan-300 px-5 py-3 text-sm font-semibold text-zinc-950 shadow-[0_12px_24px_rgba(14,116,144,0.35)] transition-transform duration-300 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-300/35 bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-400 px-5 py-3 text-sm font-semibold text-zinc-950 shadow-[0_12px_24px_rgba(63,63,70,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:from-zinc-100 hover:via-zinc-200 hover:to-zinc-300"
             >
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.75 6.75A2.75 2.75 0 0 1 7.5 4h9A2.75 2.75 0 0 1 19.25 6.75v10.5A2.75 2.75 0 0 1 16.5 20h-9a2.75 2.75 0 0 1-2.75-2.75V6.75Z" />
