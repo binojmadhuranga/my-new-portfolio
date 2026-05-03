@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { motion, type Variants } from "framer-motion";
+import { useEffect, useState, type CSSProperties } from "react";
 import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { HiOutlineBookOpen } from "react-icons/hi";
 
@@ -10,9 +10,10 @@ import { HiOutlineBookOpen } from "react-icons/hi";
 const ROLES = [
   "Software Engineer",
   "Full-Stack Developer",
-  "AI & IoT Builder",
-  "Mobile App Architect",
-  "Open-Source Creator",
+  "AI & ML Engineer",
+  "Mobile App Developer",
+  "Smart Contract Developer",
+  "Software Architect",
 ];
 
 function Typewriter() {
@@ -53,9 +54,9 @@ function Typewriter() {
   }, [displayed, deleting, paused, roleIndex]);
 
   return (
-    <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-blue-400 to-teal-300">
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-zinc-300 to-zinc-500">
       {displayed}
-      <span className="animate-pulse text-sky-400">|</span>
+      <span className="animate-pulse text-zinc-300">|</span>
     </span>
   );
 }
@@ -75,9 +76,9 @@ function StatCard({
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay, ease: "easeOut" }}
-      className="flex flex-col items-center gap-1 rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.35)] hover:border-sky-400/30 hover:bg-white/8 transition-all duration-300"
+      className="flex flex-col items-center gap-1 rounded-2xl border border-white/10 bg-white/5 px-6 py-4 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.35)] hover:border-white/30 hover:bg-white/8 transition-all duration-300"
     >
-      <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-300 to-teal-300">
+      <span className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 to-zinc-400">
         {value}
       </span>
       <span className="text-xs font-medium text-zinc-400 whitespace-nowrap">{label}</span>
@@ -97,30 +98,30 @@ const SOCIALS = [
 function FloatingOrbs() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {/* large blue orb – top-left */}
+      {/* large white orb - top-left */}
       <div
         className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full opacity-20"
         style={{
           background:
-            "radial-gradient(circle, rgba(59,130,246,0.55) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(255,255,255,0.22) 0%, transparent 70%)",
           animation: "orbDrift1 18s ease-in-out infinite",
         }}
       />
-      {/* teal orb – bottom-right */}
+      {/* soft gray orb - bottom-right */}
       <div
         className="absolute -bottom-40 -right-24 w-[500px] h-[500px] rounded-full opacity-15"
         style={{
           background:
-            "radial-gradient(circle, rgba(20,184,166,0.5) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(220,220,220,0.16) 0%, transparent 70%)",
           animation: "orbDrift2 22s ease-in-out infinite",
         }}
       />
-      {/* purple accent – center-right */}
+      {/* neutral accent - center-right */}
       <div
         className="absolute top-1/3 right-[10%] w-[280px] h-[280px] rounded-full opacity-10"
         style={{
           background:
-            "radial-gradient(circle, rgba(139,92,246,0.6) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(170,170,170,0.18) 0%, transparent 70%)",
           animation: "orbDrift3 14s ease-in-out infinite",
         }}
       />
@@ -133,12 +134,12 @@ function Sparkle({
   style,
   delay,
 }: {
-  style: React.CSSProperties;
+  style: CSSProperties;
   delay: number;
 }) {
   return (
     <motion.div
-      className="absolute w-2 h-2 rounded-full bg-sky-300"
+      className="absolute w-2 h-2 rounded-full bg-zinc-200"
       style={style}
       animate={{ scale: [0, 1.4, 0], opacity: [0, 1, 0] }}
       transition={{ duration: 2.4, delay, repeat: Infinity, ease: "easeInOut" }}
@@ -148,11 +149,11 @@ function Sparkle({
 
 /* ─── Main Hero ─────────────────────────────────────────────── */
 export default function Hero() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     show: { transition: { staggerChildren: 0.12 } },
   };
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 32 },
     show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
   };
@@ -215,8 +216,8 @@ export default function Hero() {
             >
               {/* Eyebrow badge */}
               <motion.div variants={itemVariants}>
-                <span className="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-4 py-1.5 text-sm font-semibold text-emerald-300 backdrop-blur-sm">
-                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-zinc-200 backdrop-blur-sm">
+                  <span className="h-2 w-2 rounded-full bg-zinc-100 animate-pulse" />
                   Available for opportunities
                 </span>
               </motion.div>
@@ -225,7 +226,7 @@ export default function Hero() {
               <motion.div variants={itemVariants} className="space-y-2">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-zinc-50 leading-[1.08] tracking-tight">
                   Hi, I&apos;m{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-blue-400 to-teal-300">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-zinc-300 to-zinc-500">
                     Binoj
                   </span>
                 </h1>
@@ -251,7 +252,7 @@ export default function Hero() {
               <motion.div variants={itemVariants} className="flex flex-wrap gap-3">
                 <a
                   href="#contact"
-                  className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 px-7 py-3.5 text-sm font-bold text-zinc-950 shadow-[0_0_32px_rgba(59,130,246,0.35)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_48px_rgba(59,130,246,0.5)]"
+                  className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-zinc-950 shadow-[0_0_32px_rgba(255,255,255,0.16)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-zinc-100 hover:shadow-[0_0_48px_rgba(255,255,255,0.24)]"
                 >
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -291,7 +292,7 @@ export default function Hero() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={label}
-                      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/5 text-zinc-400 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-sky-400/40 hover:bg-sky-400/10 hover:text-sky-300 hover:shadow-[0_4px_20px_rgba(56,189,248,0.2)]"
+                      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/5 text-zinc-400 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-white/35 hover:bg-white/10 hover:text-zinc-100 hover:shadow-[0_4px_20px_rgba(255,255,255,0.16)]"
                     >
                       <Icon className="h-4 w-4" />
                     </a>
@@ -320,11 +321,11 @@ export default function Hero() {
               >
                 {/* Outer glow ring */}
                 <div
-                  className="absolute inset-[-28px] rounded-full border border-sky-400/20"
+                  className="absolute inset-[-28px] rounded-full border border-white/20"
                   style={{ animation: "ringPulse 4s ease-in-out infinite" }}
                 />
                 <div
-                  className="absolute inset-[-52px] rounded-full border border-blue-400/10"
+                  className="absolute inset-[-52px] rounded-full border border-white/10"
                   style={{ animation: "ringPulse 4s ease-in-out infinite 1s" }}
                 />
 
@@ -336,7 +337,7 @@ export default function Hero() {
                 <Sparkle style={{ top: "45%", left: "-8%" }} delay={1.2} />
 
                 {/* Gradient blob behind image */}
-                <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-blue-600/20 via-sky-500/10 to-teal-500/20 blur-3xl scale-110" />
+                <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-white/12 via-zinc-300/10 to-zinc-700/8 blur-3xl scale-110" />
 
                 {/* Image container */}
                 <div className="relative group rounded-[2rem] overflow-hidden border border-white/10 bg-gradient-to-br from-slate-900 to-zinc-900 shadow-[0_32px_80px_rgba(0,0,0,0.6),0_0_0_1px_rgba(255,255,255,0.06)] transition-transform duration-700 hover:scale-[1.02]">
@@ -355,7 +356,7 @@ export default function Hero() {
                     className="max-w-sm lg:max-w-md xl:max-w-lg w-full h-auto object-contain relative z-0"
                     style={{
                       filter:
-                        "drop-shadow(0 0 12px rgba(56,189,248,0.25)) drop-shadow(0 0 48px rgba(30,58,138,0.35))",
+                        "drop-shadow(0 0 12px rgba(255,255,255,0.16)) drop-shadow(0 0 48px rgba(0,0,0,0.4))",
                     }}
                   />
                 </div>
@@ -367,7 +368,7 @@ export default function Hero() {
                   transition={{ delay: 1.1, duration: 0.6, ease: "easeOut" }}
                   className="absolute -top-4 -right-6 flex items-center gap-2 rounded-2xl border border-white/15 bg-zinc-900/90 px-4 py-2.5 shadow-[0_8px_32px_rgba(0,0,0,0.5)] backdrop-blur-xl"
                 >
-                  <div className="h-2.5 w-2.5 rounded-full bg-gradient-to-br from-sky-400 to-blue-500 shadow-[0_0_8px_rgba(56,189,248,0.6)]" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-gradient-to-br from-zinc-100 to-zinc-500 shadow-[0_0_8px_rgba(255,255,255,0.35)]" />
                   <span className="text-xs font-semibold text-zinc-200 whitespace-nowrap">Full-Stack Dev</span>
                 </motion.div>
 
@@ -400,7 +401,7 @@ export default function Hero() {
             className="w-5 h-8 rounded-full border border-zinc-700 flex items-start justify-center p-1"
             style={{ animation: "scrollBounce 1.8s ease-in-out infinite" }}
           >
-            <div className="w-1 h-2 rounded-full bg-sky-400" />
+            <div className="w-1 h-2 rounded-full bg-zinc-200" />
           </div>
         </motion.div>
       </section>
