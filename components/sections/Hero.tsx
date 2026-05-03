@@ -240,7 +240,7 @@ export default function Hero() {
                 variants={itemVariants}
                 className="text-base sm:text-lg text-zinc-400 leading-relaxed max-w-xl"
               >
-                I design and ship scalable, production-ready products across{" "}
+                I design and ship scalable, production ready products across{" "}
                 <span className="text-zinc-200 font-medium">Web</span>,{" "}
                 <span className="text-zinc-200 font-medium">Mobile</span>,{" "}
                 <span className="text-zinc-200 font-medium">AI</span>, and{" "}
