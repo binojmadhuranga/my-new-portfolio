@@ -128,8 +128,8 @@ function ContactCard({
 
 /* ─── EmailJS config (stored directly as requested) ─────────── */
 const EMAILJS_SERVICE_ID  = "service_q48sami";
-const EMAILJS_TEMPLATE_ID = "template_q8f3x8k"; // ← replace with your Template ID
-const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";   // ← replace with your Public Key
+const EMAILJS_TEMPLATE_ID = "template_03a9762";
+const EMAILJS_PUBLIC_KEY  = "mTfiEGynXBKtKsQWt";
 
 /* ─── Form ───────────────────────────────────────────────────── */
 function ContactForm() {
