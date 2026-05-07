@@ -1,5 +1,7 @@
 /* ─── SVG icons used by ContactCard ──────────────────────────── */
 
+import React from 'react';
+
 export function EmailIcon() {
   return (
     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
@@ -32,7 +34,7 @@ export function TwitterIcon() {
   );
 }
 
-export const CONTACT_ICONS: Record<string, () => JSX.Element> = {
+export const CONTACT_ICONS: Record<string, () => React.ReactElement> = {
   email: EmailIcon,
   linkedin: LinkedInIcon,
   github: GitHubIcon,
