@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 import ProfileCard from "@/components/ui/profileCard";
 
@@ -111,8 +112,7 @@ export default function Navbar() {
     <nav className="fixed inset-x-0 top-4 z-50 px-3 sm:px-4 lg:px-6">
       <div
         className={[
-          "relative mx-auto max-w-7xl overflow-hidden md:overflow-visible bg-[linear-gradient(135deg,rgba(24,24,27,0.88),rgba(9,9,11,0.9),rgba(39,39,42,0.84))] shadow-[0_18px_52px_rgba(2,6,23,0.5)] ring-1 ring-white/10 backdrop-blur-2xl transition-all duration-500",
-          isMenuOpen ? "rounded-[2rem]" : "rounded-[999px]",
+          "relative mx-auto max-w-7xl overflow-hidden md:overflow-visible rounded-[2rem] md:rounded-[999px] bg-[linear-gradient(135deg,rgba(24,24,27,0.88),rgba(9,9,11,0.9),rgba(39,39,42,0.84))] shadow-[0_18px_52px_rgba(2,6,23,0.5)] ring-1 ring-white/10 backdrop-blur-2xl transition-shadow duration-500",
           isScrolled ? "shadow-[0_22px_60px_rgba(2,6,23,0.68)]" : "",
         ].join(" ")}
       >
@@ -209,61 +209,90 @@ export default function Navbar() {
           </button>
         </div>
 
-        {isMenuOpen && (
-          <div
-            id="mobile-nav-menu"
-            className="relative z-10 border-t border-white/8 px-5 pb-5 pt-3 md:hidden"
-          >
-            <div className="flex flex-col gap-2 rounded-[1.75rem] border border-white/10 bg-zinc-900/70 p-3 backdrop-blur-xl">
-              {navLinks.map((link) => {
-                const sectionId = link.href.replace("#", "");
-                const isActive = activeSection === sectionId;
+        <AnimatePresence>
+          {isMenuOpen ? (
+            <motion.div
+              id="mobile-nav-menu"
+              initial={{ opacity: 0, y: -12, scale: 0.985 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -8, scale: 0.99 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="relative z-10 border-t border-white/8 px-5 pb-5 pt-3 md:hidden"
+            >
+              <motion.div
+                initial="hidden"
+                animate="show"
+                exit="hidden"
+                variants={{
+                  hidden: { opacity: 0, y: -8 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { staggerChildren: 0.045, delayChildren: 0.03 },
+                  },
+                }}
+                className="flex flex-col gap-2 rounded-[1.75rem] border border-white/10 bg-zinc-900/70 p-3 backdrop-blur-xl"
+              >
+                {navLinks.map((link) => {
+                  const sectionId = link.href.replace("#", "");
+                  const isActive = activeSection === sectionId;
 
-                return (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={[
-                      "rounded-2xl px-4 py-3 text-sm font-medium transition-colors",
-                      isActive
-                        ? "bg-white/12 text-white shadow-[0_8px_20px_rgba(2,6,23,0.35)]"
-                        : "text-zinc-200 hover:bg-white/8",
-                    ].join(" ")}
-                  >
-                    {link.name}
-                  </a>
-                );
-              })}
+                  return (
+                    <motion.a
+                      key={link.name}
+                      href={link.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      initial={{ opacity: 0, x: -8 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: -6 }}
+                      transition={{ duration: 0.18, ease: "easeOut" }}
+                      className={[
+                        "rounded-2xl px-4 py-3 text-sm font-medium transition-colors",
+                        isActive
+                          ? "bg-white/12 text-white shadow-[0_8px_20px_rgba(2,6,23,0.35)]"
+                          : "text-zinc-200 hover:bg-white/8",
+                      ].join(" ")}
+                    >
+                      {link.name}
+                    </motion.a>
+                  );
+                })}
 
-              <div className="mt-2 flex items-center justify-between gap-3 rounded-2xl bg-zinc-950 px-4 py-3 text-white">
-                <a
-                  href="https://medium.com/@binojmadhuranga"
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="inline-flex items-center gap-2 text-sm font-semibold"
+                <motion.div
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 4 }}
+                  transition={{ duration: 0.18, ease: "easeOut", delay: 0.06 }}
+                  className="mt-2 flex items-center justify-between gap-3 rounded-2xl bg-zinc-950 px-4 py-3 text-white"
                 >
-                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.75 6.75A2.75 2.75 0 0 1 7.5 4h9A2.75 2.75 0 0 1 19.25 6.75v10.5A2.75 2.75 0 0 1 16.5 20h-9a2.75 2.75 0 0 1-2.75-2.75V6.75Z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.5 7.75h3.75a1 1 0 0 1 1 1v10.5m-4.75-11.5v8.75m10.5-8.75h-4.75" />
-                  </svg>
-                  Blogs
-                </a>
+                  <a
+                    href="https://medium.com/@binojmadhuranga"
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="inline-flex items-center gap-2 text-sm font-semibold"
+                  >
+                    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.75 6.75A2.75 2.75 0 0 1 7.5 4h9A2.75 2.75 0 0 1 19.25 6.75v10.5A2.75 2.75 0 0 1 16.5 20h-9a2.75 2.75 0 0 1-2.75-2.75V6.75Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.5 7.75h3.75a1 1 0 0 1 1 1v10.5m-4.75-11.5v8.75m10.5-8.75h-4.75" />
+                    </svg>
+                    Blogs
+                  </a>
 
-                <div className="relative h-10 w-10 overflow-hidden rounded-full border border-zinc-600">
-                  <Image
-                    src="/profile.png"
-                    alt="Binoj Madhuranga"
-                    fill
-                    sizes="40px"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+                  <div className="relative h-10 w-10 overflow-hidden rounded-full border border-zinc-600">
+                    <Image
+                      src="/profile.png"
+                      alt="Binoj Madhuranga"
+                      fill
+                      sizes="40px"
+                      className="object-cover"
+                    />
+                  </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
       </div>
     </nav>
   );
