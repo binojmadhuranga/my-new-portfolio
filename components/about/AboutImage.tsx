@@ -47,9 +47,12 @@ export default function AboutImage({ inView }: AboutImageProps) {
             alt=""
             fill
             aria-hidden="true"
+            quality={100}
             sizes="(min-width:1024px) 38vw,(min-width:640px) 60vw, 90vw"
-            className="object-cover object-[70%_top] opacity-80 brightness-75"
+            className="object-cover object-[70%_top] opacity-100 brightness-95 contrast-110 saturate-105"
           />
+          {/* Soft clarity layer */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_42%),linear-gradient(180deg,transparent_0%,rgba(7,10,18,0.08)_52%,rgba(7,10,18,0.32)_100%)] mix-blend-soft-light pointer-events-none z-10" />
           {/* Shimmer on hover */}
           <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none z-10" />
           {/* Bottom fade */}
