@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import {
   HiOutlineAcademicCap,
-  HiOutlineUsers,
   HiOutlineCode,
 } from "react-icons/hi";
 
@@ -38,14 +38,15 @@ const highlights = [
     glow: "rgba(59,130,246,0.35)",
   },
   {
-    icon: HiOutlineUsers,
-    title: "Volunteer",
-    value: "Active",
-    sub: "Community & Academic Initiatives",
-    accent: "from-emerald-500/20 to-teal-500/10",
-    border: "border-emerald-400/25",
-    iconColor: "text-emerald-300",
-    glow: "rgba(16,185,129,0.35)",
+    icon: HiOutlineCode,
+    image: "/Xigenix.jpg",
+    title: "Experience",
+    value: "Intern",
+    sub: "Software Engineer @ Xigenix",
+    accent: "from-orange-500/20 to-amber-500/10",
+    border: "border-orange-400/25",
+    iconColor: "text-orange-300",
+    glow: "rgba(249,115,22,0.35)",
   },
 ];
 
@@ -53,6 +54,7 @@ type HighlightItem = (typeof highlights)[0];
 
 function HighlightCard({
   icon: Icon,
+  image,
   title,
   value,
   sub,
@@ -81,9 +83,13 @@ function HighlightCard({
       />
       <div className="relative z-10 flex flex-col gap-3">
         <div
-          className={`inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 border border-white/10 ${iconColor}`}
+          className={`inline-flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 border border-white/10 ${iconColor} overflow-hidden`}
         >
-          <Icon className="w-5 h-5" />
+          {image ? (
+            <Image src={image} alt={title} width={44} height={44} className="w-full h-full object-cover rounded-xl" />
+          ) : (
+            <Icon className="w-5 h-5" />
+          )}
         </div>
         <div>
           <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500 mb-1">
