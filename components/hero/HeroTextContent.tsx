@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import { FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { HiOutlineBookOpen } from "react-icons/hi";
@@ -93,8 +94,14 @@ export default function HeroTextContent({ containerVariants, itemVariants }: Her
       {/* Eyebrow badge */}
       <motion.div variants={itemVariants}>
         <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-zinc-200 backdrop-blur-sm">
-          <span className="h-2 w-2 rounded-full bg-zinc-100 animate-pulse" />
-          Available for opportunities
+          <Image
+            src="/Xigenix.jpg"
+            alt="Xigenix"
+            width={20}
+            height={20}
+            className="rounded-full object-cover"
+          />
+          Intern Software Engineer @ Xigenix
         </span>
       </motion.div>
 
