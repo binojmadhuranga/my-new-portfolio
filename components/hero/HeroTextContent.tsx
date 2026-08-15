@@ -9,7 +9,7 @@ import { HiOutlineBookOpen } from "react-icons/hi";
 /* ─── Typewriter ────────────────────────────────────────────── */
 const ROLES = [
   "Software Engineer",
-  "Full-Stack Developer",
+  "Research and Developer",
   "AI & ML Engineer",
   "Mobile App Developer",
   "Smart Contract Developer",

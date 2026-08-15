@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import { useInView } from "framer-motion";
 import { FaAws, FaJava } from "react-icons/fa6";
 import {
-  SiAndroidstudio, SiC, SiCss, SiDocker, SiDotnet, SiExpo, SiExpress,
+  SiAndroidstudio, SiAngular, SiC, SiCss, SiDocker, SiDotnet, SiExpo, SiExpress,
   SiFigma, SiFlask, SiGit, SiGithub, SiGo, SiHibernate, SiHtml5,
   SiIntellijidea, SiJavascript, SiJenkins, SiKaggle, SiLinux, SiMongodb,
   SiMysql, SiNextdotjs, SiNodedotjs, SiPandas, SiPhp, SiPostgresql,
@@ -41,6 +41,7 @@ const techStack: TechItem[] = [
   { name: "Expo",         icon: SiExpo,         iconClassName: "text-zinc-200",   category: "Frontend" },
   { name: "Redux",        icon: SiRedux,        iconClassName: "text-violet-400", category: "Frontend" },
   { name: "Tailwind CSS", icon: SiTailwindcss,  iconClassName: "text-sky-400",    category: "Frontend" },
+  { name: "Angular",      icon: SiAngular,      iconClassName: "text-red-500",     category: "Frontend" },
   // Backend
   { name: "Node.js",   icon: SiNodedotjs, iconClassName: "text-lime-400",   category: "Backend" },
   { name: "Express",   icon: SiExpress,   iconClassName: "text-zinc-200",   category: "Backend" },
