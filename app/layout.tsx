@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Binoj Madhuranga",
   },
   description:
-    "Portfolio of Binoj Madhuranga - Software Engineer, AI & ML Developer, and Full-Stack Architect at Xigenix. Specializing in React, Next.js, Spring Boot, Node.js, Mobile Apps, and Cloud Solutions.",
+    "Portfolio of Binoj Madhuranga - Software Engineer, AI & ML Developer, and Full-Stack Software Engineer at Xigenix. Specializing in React, Next.js, Spring Boot,Asp .NET, Node.js, Mobile Apps, and Cloud Solutions.",
   keywords: [
     "Binoj Madhuranga",
     "Binoj Madhuranga Portfolio",
