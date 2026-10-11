@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import StructuredData from "@/components/StructuredData";
-import "./globals.css";
+// import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binojmadhuranga.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binoj.me";
 
 export const viewport: Viewport = {
   themeColor: "#000000",
