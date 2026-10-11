@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import StructuredData from "@/components/StructuredData";
-// import "./globals.css";
+import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://binoj.me";
 
