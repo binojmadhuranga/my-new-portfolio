@@ -44,9 +44,8 @@ export default function AboutImage({ inView }: AboutImageProps) {
         <div className="relative w-[320px] sm:w-[380px] lg:w-[420px] h-[480px] sm:h-[540px] rounded-[2rem] overflow-hidden border border-white/10 bg-gradient-to-br from-slate-900 to-zinc-900 shadow-[0_32px_80px_rgba(0,0,0,0.6),0_0_0_1px_rgba(255,255,255,0.06)] group transition-transform duration-700 hover:scale-[1.015]">
           <Image
             src="/about.png"
-            alt=""
+            alt="Binoj Madhuranga - Full-Stack & AI Software Engineer Profile Photo"
             fill
-            aria-hidden="true"
             quality={100}
             sizes="(min-width:1024px) 38vw,(min-width:640px) 60vw, 90vw"
             className="object-cover object-[70%_top] opacity-100 brightness-95 contrast-110 saturate-105"
@@ -96,7 +95,7 @@ export default function AboutImage({ inView }: AboutImageProps) {
         >
           <Image
             src="/uni_logo.png"
-            alt="SUSL"
+            alt="Sabaragamuwa University of Sri Lanka (SUSL) Logo"
             width={24}
             height={24}
             className="rounded-full object-contain"

@@ -96,7 +96,7 @@ export default function HeroTextContent({ containerVariants, itemVariants }: Her
         <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-zinc-200 backdrop-blur-sm">
           <Image
             src="/Xigenix.jpg"
-            alt="Xigenix"
+            alt="Xigenix Logo"
             width={20}
             height={20}
             className="rounded-full object-cover"
